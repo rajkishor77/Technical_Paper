@@ -238,3 +238,26 @@ Quick Recap:
 
 By following SOLID, our code becomes like a well-organized house—each room has a purpose, we can add new furniture without breaking the walls, and it’s easy to maintain in the long run.
 
+
+---
+
+## 📚 References  
+
+1. Robert C. Martin (Uncle Bob) — *Design Principles and Design Patterns* (2000)  
+   [http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod)  
+
+2. GeeksforGeeks — *SOLID Principle in Programming with Real Life Examples*  
+   [https://www.geeksforgeeks.org/system-design/solid-principle-in-programming-understand-with-real-life-examples/](https://www.geeksforgeeks.org/system-design/solid-principle-in-programming-understand-with-real-life-examples/)  
+
+3. FreeCodeCamp — *SOLID Principles Explained in Plain English*  
+   [https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/](https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/)  
+
+4. DigitalOcean Community — *S.O.L.I.D: The First Five Principles of Object-Oriented Design*  
+   [https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design](https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)  
+
+5. Wikipedia — *SOLID (object-oriented design)*  
+   [https://en.wikipedia.org/wiki/SOLID](https://en.wikipedia.org/wiki/SOLID)  
+
+---
+
+
