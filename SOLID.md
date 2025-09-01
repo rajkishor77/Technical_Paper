@@ -62,7 +62,7 @@ Think about a smartphone. You can install new apps anytime, but you don’t need
 
 ✨ In Software
 ```python
-## ❌ Bad Example: Modifies the same class for each new feature
+# ❌ Bad Example: Modifies the same class for each new feature
 class Payment:
     def pay(self, type):
         if type == "card":
@@ -70,7 +70,7 @@ class Payment:
         elif type == "paypal":
             print("Paid with PayPal")
 
-## ✅ Good Example: Extend with new classes
+# ✅ Good Example: Extend with new classes
 class PaymentMethod:
     def pay(self): 
         pass
@@ -101,7 +101,7 @@ If a car is a type of vehicle, then you should be able to use a car anywhere you
 
 ✨ In Software
 ```python
-## ❌ Bad Example: Ostrich breaks the rule
+# ❌ Bad Example: Ostrich breaks the rule
 class Bird:
     def fly(self): 
         print("Flying")
@@ -110,7 +110,7 @@ class Ostrich(Bird):
     def fly(self): 
         raise Exception("Ostrich can't fly!")
 
-## ✅ Good Example: Separate flying and non-flying birds
+# ✅ Good Example: Separate flying and non-flying birds
 class Bird: 
     pass
 
@@ -137,7 +137,7 @@ If we force all printers to have scan() and fax(), the basic printer will have u
 
 ✨ In Software
 ```python
-## ❌ Bad Example: One big interface
+# ❌ Bad Example: One big interface
 class Machine:
     def print(self):
         pass
@@ -152,7 +152,7 @@ class SimplePrinter(Machine):
     def fax(self):
         raise NotImplementedError
 
-## ✅ Good Example: Separate interfaces
+# ✅ Good Example: Separate interfaces
 class Printer:
     def print(self):
         pass
@@ -186,7 +186,7 @@ The charger doesn’t depend on the brand of the phone.
 
 ✨ In Software
 ```python
-## ❌ Bad Example: App tied to MySQL
+# ❌ Bad Example: App tied to MySQL
 class MySQLDatabase:
     def connect(self):
         print("Connected to MySQL")
@@ -195,7 +195,7 @@ class App:
     def __init__(self):
         self.db = MySQLDatabase()
 
-## ✅ Good Example: Depend on abstraction
+# ✅ Good Example: Depend on abstraction
 class Database:
     def connect(self):
         pass
