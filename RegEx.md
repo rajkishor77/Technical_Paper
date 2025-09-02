@@ -166,9 +166,6 @@ print(re.escape("Hello. How are you?"))
 
 # 🔍 Python Regex: Match Object & Pattern Object
 
-When you use `re.match()`, `re.search()`, or `re.finditer()`, they return a **Match object** if a match is found.  
-When you use `re.compile()`, you get a **Pattern object** that stores regex information.
-
 ---
 
 ## 🔹 Python Regex Special Sequences
@@ -206,6 +203,11 @@ Character sets are enclosed in square brackets `[]` and match **any single chara
 | `\D` | Matches any non-digit character | `\D` | `"G"` ✅ |
 | `\w` | Matches any alphanumeric `[a-zA-Z0-9_]` | `\w` | `"A"` ✅ |
 | `\W` | Matches any non-alphanumeric character | `\W` | `"@"` ✅ |
+
+---
+
+When you use `re.match()`, `re.search()`, or `re.finditer()`, they return a **Match object** if a match is found.  
+When you use `re.compile()`, you get a **Pattern object** that stores regex information.
 
 
 ---
