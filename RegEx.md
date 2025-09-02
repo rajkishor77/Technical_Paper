@@ -170,6 +170,44 @@ When you use `re.match()`, `re.search()`, or `re.finditer()`, they return a **Ma
 When you use `re.compile()`, you get a **Pattern object** that stores regex information.
 
 ---
+
+## 🔹 Python Regex Special Sequences
+
+| Special Sequence | Description | Example | Matches |
+|-----------------|-------------|---------|---------|
+| `\A` | Matches only at the **beginning** of the string | `\Afor` | `"for geeks"` ✅, `"for the world"` ✅ |
+| `\b` | Matches a **word boundary** (beginning or end of a word) | `\bge` | `"geeks"` ✅, `"get"` ✅ |
+| `\B` | Opposite of `\b`; matches **not at a word boundary** | `\Bge` | `"together"` ✅, `"forge"` ✅ |
+| `\d` | Matches **any decimal digit** `[0-9]` | `\d` | `"123"` ✅, `"gee1"` ✅ |
+| `\D` | Matches **any non-digit character** `[^0-9]` | `\D` | `"geeks"` ✅, `"geek1"` ❌ |
+| `\s` | Matches **any whitespace character** | `\s` | `"gee ks"` ✅, `"a bc a"` ✅ |
+| `\S` | Matches **any non-whitespace character** | `\S` | `"a bd"` ✅, `"abcd"` ✅ |
+| `\w` | Matches **any alphanumeric character** `[a-zA-Z0-9_]` | `\w` | `"123"` ✅, `"geeKs4"` ✅ |
+| `\W` | Matches **any non-alphanumeric character** | `\W` | `">$"` ✅, `"gee<>"` ✅ |
+| `\Z` | Matches only at the **end** of the string | `ab\Z` | `"abcdab"` ✅, `"abababab"` ✅ |
+
+---
+
+## 🔹 Character Sets in Regex
+
+Character sets are enclosed in square brackets `[]` and match **any single character** in the set.
+
+| Set | Description | Example | Matches |
+|-----|-------------|---------|---------|
+| `[0123]` | Matches one of the digits 0, 1, 2, or 3 | `[0123]` | `"0"` ✅, `"2"` ✅ |
+| `[^arn]` | Matches **any character except** a, r, n | `[^arn]` | `"b"` ✅, `"a"` ❌ |
+| `[0-5][0-9]` | Matches numbers from 00 to 59 | `[0-5][0-9]` | `"34"` ✅, `"60"` ❌ |
+| `[a-n]` | Matches any lowercase letter from a to n | `[a-n]` | `"b"` ✅, `"o"` ❌ |
+| `[a-zA-Z]` | Matches any alphabet letter | `[a-zA-Z]` | `"G"` ✅, `"7"` ❌ |
+| `[arn]` | Matches exactly one of the characters a, r, or n | `[arn]` | `"a"` ✅, `"b"` ❌ |
+| `\{n,}` | Matches **at least n occurrences** of preceding char/group | `a{2,}` | `"aa"` ✅, `"a"` ❌ |
+| `*` | Matches **0 or more occurrences** of preceding char/group | `a*` | `"aaa"` ✅, `""` ✅ |
+| `\d` | Matches any digit `[0-9]` | `\d` | `"7"` ✅ |
+| `\D` | Matches any non-digit character | `\D` | `"G"` ✅ |
+| `\w` | Matches any alphanumeric `[a-zA-Z0-9_]` | `\w` | `"A"` ✅ |
+| `\W` | Matches any non-alphanumeric character | `\W` | `"@"` ✅ |
+
+
 ---
 ## 🎯 Match Object Methods
 
