@@ -6,7 +6,7 @@ This paper explains the most important database concepts used to maintain data r
 
 ---
 
-## ACID Properties  
+## 1. ACID Properties  
 
 ACID ensures that database transactions are **reliable and consistent**.  
 
@@ -23,7 +23,7 @@ UPDATE accounts SET balance = balance - 500 WHERE id = 1;
 UPDATE accounts SET balance = balance + 500 WHERE id = 2;
 COMMIT;
 ```
-## CAP Theorem
+## 2. CAP Theorem
 The CAP theorem states that a distributed system can only provide two out of three:
 
 **Consistency (C)** – All users see the same data.
@@ -40,7 +40,7 @@ AP systems focus on availability.
 
 CA systems are nearly impossible in distributed environments.
 
-## Joins
+## 3. Joins
 Joins are used to combine rows from multiple tables.
 
 **Types of Joins**
@@ -82,7 +82,7 @@ FULL OUTER JOIN departments d
 ON e.dept_id = d.id;
 ```
 
-## Aggregations and Filters
+## 4. Aggregations and Filters
 Aggregations summarize data, while filters refine results.
 
 **WHERE** – Filters rows before grouping.
@@ -101,7 +101,7 @@ GROUP BY dept_id
 HAVING COUNT(*) > 5;
 ```
 
-## Normalization
+## 5. Normalization
 Normalization reduces redundancy and improves data integrity.
 
 **1NF:** No repeating groups; each cell is atomic.
@@ -112,7 +112,7 @@ Normalization reduces redundancy and improves data integrity.
 
 **BCNF:** Stronger form of 3NF.
 
-## Indexes
+## 6. Indexes
 Indexes improve data retrieval speed but may slow down writes.
 
 **B-tree Index:** Best for range queries.
@@ -128,7 +128,7 @@ CREATE INDEX idx_employee_name
 ON employees(name);
 ```
 
-## Transactions
+## 7. Transactions
 A transaction is a group of operations executed together.
 
 **Example:**
@@ -142,7 +142,7 @@ COMMIT;
 
 If one step fails, the transaction can be rolled back.
 
-## Locking Mechanism
+## 8. Locking Mechanism
    
 Locks prevent data corruption in concurrent transactions.
 
@@ -152,7 +152,7 @@ Locks prevent data corruption in concurrent transactions.
 
 **Deadlocks:** Occur when two transactions wait on each other.
 
-## Database Isolation Levels
+## 9. Database Isolation Levels
 Isolation levels prevent problems like dirty reads and phantom reads.
 
 **Read Uncommitted** – Can see uncommitted changes (least safe).
@@ -163,7 +163,7 @@ Isolation levels prevent problems like dirty reads and phantom reads.
 
 **Serializable** – Highest level, transactions behave sequentially.
 
-## Triggers
+## 10. Triggers
 Triggers automatically run on specific events (INSERT, UPDATE, DELETE).
 
 **Example:**
@@ -177,7 +177,7 @@ BEGIN
 END;
 ```
 
-**Conclusion**
+## Conclusion
 - Understanding these concepts helps in building efficient, consistent, and reliable database systems.
 - ACID ensures reliability.
 - CAP theorem guides distributed databases.
