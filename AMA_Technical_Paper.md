@@ -32,7 +32,7 @@ In Python, abstraction is done using abstract classes and methods (from abc modu
 In programming, it makes code simpler and easier to use.
 
 ## 4. Difference Between Grid and Flex
-Flexbox
+**Flexbox**
 Works in one direction at a time (row OR column).
 
 Best for aligning items like menus, toolbars, or small sections.
