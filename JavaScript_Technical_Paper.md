@@ -39,13 +39,13 @@ JavaScript gives us three keywords to declare variables, each with its own rules
   * **Rule**: You must assign a value when you declare it, and you **cannot re-assign** it later.
       * *Note*: For objects and arrays, you can change the contents (e.g., add an item to an array), but you can't point the variable to a *new* array or object.
 
-### 2.2. `let` (The Flexible Variable—Use Second\! ✍️)
+### 2.2. `let` (The Flexible Variable—Use Second\!)
 
   * **Best For**: Values that you expect to **change** (e.g., counters, loop variables).
   * **Scope**: **Block-Scoped**.
   * **Rule**: You can assign it a new value (re-assign it) as many times as you want.
 
-### 2.3. `var` (The Outdated Keyword—AVOID\! 🗑️)
+### 2.3. `var` (The Outdated Keyword—AVOID\!)
 
   * **Best For**: Nothing. Seriously, don't use it in new code.
   * **Scope**: **Function-Scoped** (or Global). This means a variable declared inside an `if` block or `for` loop is often visible *outside* that block, which leads to confusing and buggy code.
