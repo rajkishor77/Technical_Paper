@@ -32,7 +32,7 @@ These values can't be changed after they're created (they are **immutable**).
 
 JavaScript gives us three keywords to declare variables, each with its own rules for where the variable is available (**scope**).
 
-### 2.1. `const` (The Constant—Use First\! 🛡️)
+### 2.1. `const` (The Constant—Use First\!)
 
   * **Best For**: Values that should **never change**.
   * **Scope**: **Block-Scoped**. It's only available within the curly braces (`{}`) where it was defined.
