@@ -5,7 +5,7 @@
 
 ## 1\. How JS executes the code?
 
-JavaScript is **single-threaded**, meaning it has only **one Call Stack** (like one chef 🧑‍🍳) to execute code. It runs tasks **synchronously**, one after the other. If a task takes a long time (e.g., fetching data from a server), the entire program would stop or "block" until that task is done. To prevent this blocking, JS uses external environments (like **Web Browser APIs**) to handle long tasks, coordinated by the **Event Loop**.
+JavaScript is **single-threaded**, meaning it has only **one Call Stack** (like one chef ) to execute code. It runs tasks **synchronously**, one after the other. If a task takes a long time (e.g., fetching data from a server), the entire program would stop or "block" until that task is done. To prevent this blocking, JS uses external environments (like **Web Browser APIs**) to handle long tasks, coordinated by the **Event Loop**.
 
 ## 2\. What is diff between Sync & Async?
 
