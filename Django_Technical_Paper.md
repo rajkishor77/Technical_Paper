@@ -698,144 +698,17 @@ with transaction.atomic():
 ---
 
 
+# **References**
 
-#  **References**
-
-###  **General Django Documentation**
-
-1. Django Software Foundation. *Official Django Documentation.*
-   URL: [https://docs.djangoproject.com/en/stable/](https://docs.djangoproject.com/en/stable/)
-   Description: The primary and most authoritative source for Django concepts including ORM, Middleware, Models, and Security settings.
-
----
-
-### **Settings File & WSGI**
-
-2. Django Documentation. *Settings — Django configuration system.*
-   URL: [https://docs.djangoproject.com/en/stable/topics/settings/](https://docs.djangoproject.com/en/stable/topics/settings/)
-   Description: Provides complete information about Django’s `settings.py`, including `SECRET_KEY`, installed apps, and configuration best practices.
-
-3. Python Software Foundation. *Web Server Gateway Interface (WSGI) — PEP 3333.*
-   URL: [https://peps.python.org/pep-3333/](https://peps.python.org/pep-3333/)
-   Description: Explains how WSGI serves as an interface between web servers and Python web applications, including Django.
-
-4. DigitalOcean Community Tutorials. *How To Set Up Django with Gunicorn and Nginx (WSGI).*
-   URL: [https://www.digitalocean.com/community/tutorials](https://www.digitalocean.com/community/tutorials)
-   Description: Practical setup and explanation of how WSGI works in deployment with Django.
-
----
-
-### **Models & Fields**
-
-5. Django Documentation. *Models — Defining your data models.*
-   URL: [https://docs.djangoproject.com/en/stable/topics/db/models/](https://docs.djangoproject.com/en/stable/topics/db/models/)
-   Description: Details about Django models, fields, and relationships including `on_delete` behaviors.
-
-6. Django Documentation. *Model field reference.*
-   URL: [https://docs.djangoproject.com/en/stable/ref/models/fields/](https://docs.djangoproject.com/en/stable/ref/models/fields/)
-   Description: Lists all built-in field types (e.g., CharField, IntegerField) and their parameters.
-
-7. Real Python. *Django Models: Mastering Database Interactions.*
-   URL: [https://realpython.com/django-models-database/](https://realpython.com/django-models-database/)
-   Description: A simplified explanation of how Django ORM maps models to SQL tables.
-
----
-
-### **ORM, Aggregations & Migrations**
-
-8. Django Documentation. *QuerySets and ORM.*
-   URL: [https://docs.djangoproject.com/en/stable/topics/db/queries/](https://docs.djangoproject.com/en/stable/topics/db/queries/)
-   Description: Covers QuerySet methods, filters, and query optimization.
-
-9. Django Documentation. *Aggregation and Annotation.*
-   URL: [https://docs.djangoproject.com/en/stable/topics/db/aggregation/](https://docs.djangoproject.com/en/stable/topics/db/aggregation/)
-   Description: Official explanation of `annotate()` and `aggregate()` methods in ORM.
-
-10. Django Documentation. *Migrations — Managing database schema changes.*
-    URL: [https://docs.djangoproject.com/en/stable/topics/migrations/](https://docs.djangoproject.com/en/stable/topics/migrations/)
-    Description: Describes how Django tracks and applies model changes to the database.
-
-11. GeeksforGeeks. *Django ORM Queries – A Complete Guide.*
-    URL: [https://www.geeksforgeeks.org/django-orm-queries/](https://www.geeksforgeeks.org/django-orm-queries/)
-    Description: A simplified overview with code examples for ORM operations.
-
-12. Stack Overflow Discussions — *Django ORM Internals and SQL Conversion.*
-    URL: [https://stackoverflow.com/questions/tagged/django-orm](https://stackoverflow.com/questions/tagged/django-orm)
-    Description: Helpful community insights on using `.query` and SQL debugging.
-
----
-
-### **Transactions**
-
-13. Django Documentation. *Transactions — Managing database integrity.*
-    URL: [https://docs.djangoproject.com/en/stable/topics/db/transactions/](https://docs.djangoproject.com/en/stable/topics/db/transactions/)
-    Description: Explains `@transaction.atomic` and how Django ensures data consistency.
-
-14. W3Schools SQL Tutorial. *SQL Transactions.*
-    URL: [https://www.w3schools.com/sql/sql_transactions.asp](https://www.w3schools.com/sql/sql_transactions.asp)
-    Description: Easy-to-understand explanation of SQL transactions, commits, and rollbacks.
-
-15. PostgreSQL Manual. *Transactions.*
-    URL: [https://www.postgresql.org/docs/current/tutorial-transactions.html](https://www.postgresql.org/docs/current/tutorial-transactions.html)
-    Description: Official explanation of transaction handling in relational databases.
-
----
-
-### **Security (CSRF, XSS, Clickjacking, Middleware)**
-
-16. Django Documentation. *Security Overview.*
-    URL: [https://docs.djangoproject.com/en/stable/topics/security/](https://docs.djangoproject.com/en/stable/topics/security/)
-    Description: Covers Django’s built-in protections like CSRF, XSS, SQL injection, and clickjacking prevention.
-
-17. Mozilla Developer Network (MDN). *Cross-Site Scripting (XSS).*
-    URL: [https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting)
-    Description: In-depth explanation of XSS attacks and mitigation strategies.
-
-18. OWASP Foundation. *Cross-Site Request Forgery (CSRF).*
-    URL: [https://owasp.org/www-community/attacks/csrf](https://owasp.org/www-community/attacks/csrf)
-    Description: Details on CSRF vulnerabilities and defense mechanisms.
-
-19. OWASP Foundation. *Clickjacking Defense Cheat Sheet.*
-    URL: [https://owasp.org/www-project-cheat-sheets/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html](https://owasp.org/www-project-cheat-sheets/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html)
-    Description: Explains how `X-Frame-Options` headers protect Django apps from clickjacking.
-
-20. Real Python. *Understanding Django Middleware and Security Layers.*
-    URL: [https://realpython.com/django-middleware/](https://realpython.com/django-middleware/)
-    Description: Provides examples and simplified explanations of middleware functions.
-
----
-
-### **Python Concepts**
-
-21. Python Documentation. *Modules vs Classes.*
-    URL: [https://docs.python.org/3/tutorial/modules.html](https://docs.python.org/3/tutorial/modules.html)
-    Description: Explains how Python modules and classes differ conceptually and in use.
-
-22. GeeksforGeeks. *Difference Between Python Module and Class.*
-    URL: [https://www.geeksforgeeks.org/difference-between-python-module-and-class/](https://www.geeksforgeeks.org/difference-between-python-module-and-class/)
-    Description: Simple explanation comparing module-level and class-level code.
-
----
-
-### **Tutorials and Community Guides**
-
-23. FreeCodeCamp. *Complete Django for Beginners Tutorial.*
-    URL: [https://www.freecodecamp.org/news/django-beginners-guide/](https://www.freecodecamp.org/news/django-beginners-guide/)
-    Description: Comprehensive beginner’s guide to Django with examples and exercises.
-
-24. TutorialsPoint. *Django Framework Overview.*
-    URL: [https://www.tutorialspoint.com/django/](https://www.tutorialspoint.com/django/)
-    Description: Simplified theoretical overview of all Django components.
-
-25. Medium Articles — *Django ORM, Security, and Middleware Explained Simply.*
-    URL: [https://medium.com/tag/django](https://medium.com/tag/django)
-    Description: Collection of easy-to-understand Django articles for practical learners.
----
-
-### **Citation Format (Optional for Report)**
-
-If you are preparing a **thesis or report**, you can cite as:
-
-> Django Software Foundation. *Django Documentation (Version 5.0)*. Retrieved from [https://docs.djangoproject.com/en/stable/](https://docs.djangoproject.com/en/stable/)
+1. Django Software Foundation. *Official Django Documentation.* [https://docs.djangoproject.com/en/stable/](https://docs.djangoproject.com/en/stable/)
+2. Django Docs. *Settings — Django configuration system.* [https://docs.djangoproject.com/en/stable/topics/settings/](https://docs.djangoproject.com/en/stable/topics/settings/)
+3. Python PEP 3333. *WSGI: Web Server Gateway Interface.* [https://peps.python.org/pep-3333/](https://peps.python.org/pep-3333/)
+4. Django Docs. *Models and Fields Reference.* [https://docs.djangoproject.com/en/stable/ref/models/fields/](https://docs.djangoproject.com/en/stable/ref/models/fields/)
+5. Django Docs. *QuerySets, Aggregation, and Annotation.* [https://docs.djangoproject.com/en/stable/topics/db/aggregation/](https://docs.djangoproject.com/en/stable/topics/db/aggregation/)
+6. Django Docs. *Migrations and Database Transactions.* [https://docs.djangoproject.com/en/stable/topics/migrations/](https://docs.djangoproject.com/en/stable/topics/migrations/)
+7. Django Docs. *Security Overview: CSRF, XSS, Clickjacking.* [https://docs.djangoproject.com/en/stable/topics/security/](https://docs.djangoproject.com/en/stable/topics/security/)
+8. OWASP. *CSRF and Clickjacking Mitigation.* [https://owasp.org/](https://owasp.org/)
+9. Real Python. *Understanding Django Middleware and ORM.* [https://realpython.com/django-middleware/](https://realpython.com/django-middleware/)
+10. Python Docs. *Modules vs Classes.* [https://docs.python.org/3/tutorial/modules.html](https://docs.python.org/3/tutorial/modules.html)
 
 ---
