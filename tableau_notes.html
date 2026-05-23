@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tableau Complete Notes</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',sans-serif;background:#f4f6fb;color:#1a1a2e;line-height:1.7}
+  header{background:linear-gradient(135deg,#1a1a6e,#4a4ae8);color:#fff;padding:2rem;text-align:center}
+  header h1{font-size:2rem;font-weight:700;letter-spacing:1px}
+  header p{font-size:1rem;opacity:.85;margin-top:.4rem}
+  .toc{background:#fff;max-width:960px;margin:1.5rem auto;border-radius:12px;padding:1.5rem 2rem;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+  .toc h2{color:#1a1a6e;font-size:1.1rem;margin-bottom:1rem;border-bottom:2px solid #e0e3ff;padding-bottom:.5rem}
+  .toc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:.5rem}
+  .toc a{display:block;background:#f0f2ff;color:#1a1a6e;text-decoration:none;padding:.4rem .8rem;border-radius:6px;font-size:.85rem;font-weight:500;transition:background .2s}
+  .toc a:hover{background:#d0d5ff}
+  .container{max-width:960px;margin:0 auto 3rem;padding:0 1rem}
+  .section{background:#fff;border-radius:12px;margin-bottom:1.5rem;padding:1.8rem 2rem;box-shadow:0 2px 12px rgba(0,0,0,.07);border-left:4px solid #4a4ae8}
+  .section h2{font-size:1.25rem;color:#1a1a6e;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+  .badge{background:#e0e3ff;color:#1a1a6e;font-size:.72rem;padding:.15rem .55rem;border-radius:20px;font-weight:600}
+  .badge.imp{background:#ffe5e5;color:#c0392b}
+  .badge.must{background:#e0ffe8;color:#1a7c2e}
+  h3{color:#2d2d8e;font-size:1rem;margin:1rem 0 .4rem;font-weight:600}
+  p{font-size:.93rem;color:#333;margin-bottom:.5rem}
+  ul,ol{padding-left:1.4rem;font-size:.92rem;color:#333;margin-bottom:.6rem}
+  li{margin-bottom:.25rem}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.8rem}
+  .card{background:#f7f8ff;border:1px solid #e0e3ff;border-radius:8px;padding:1rem 1.2rem}
+  .card h4{color:#1a1a6e;font-size:.92rem;font-weight:600;margin-bottom:.5rem}
+  .card ul{font-size:.87rem}
+  .highlight{background:#fffbe6;border-left:3px solid #f0a500;padding:.7rem 1rem;border-radius:0 8px 8px 0;margin:.8rem 0;font-size:.9rem}
+  table{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:.8rem}
+  th{background:#e0e3ff;color:#1a1a6e;padding:.55rem .8rem;text-align:left}
+  td{padding:.5rem .8rem;border-bottom:1px solid #eee}
+  tr:last-child td{border:none}
+  code{background:#f0f2ff;color:#1a1a6e;padding:.1rem .4rem;border-radius:4px;font-size:.85rem;font-family:monospace}
+  .tag{display:inline-block;background:#ffe5e5;color:#c0392b;font-size:.75rem;padding:.1rem .45rem;border-radius:4px;font-weight:600;margin-right:.3rem}
+  .tag.blue{background:#e0e8ff;color:#1a1a6e}
+  .tag.green{background:#e0ffe8;color:#1a7c2e}
+  .steps{counter-reset:step}
+  .steps li{list-style:none;counter-increment:step;padding-left:1.5rem;position:relative;margin-bottom:.4rem}
+  .steps li::before{content:counter(step);position:absolute;left:0;top:0;background:#4a4ae8;color:#fff;width:1.2rem;height:1.2rem;border-radius:50%;font-size:.72rem;display:flex;align-items:center;justify-content:center;font-weight:700}
+  .section-accent-green{border-left-color:#1a7c2e}
+  .section-accent-red{border-left-color:#c0392b}
+  .section-accent-orange{border-left-color:#e67e22}
+  .roadmap{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
+  .roadmap-step{background:#e0e3ff;color:#1a1a6e;padding:.4rem .9rem;border-radius:20px;font-size:.85rem;font-weight:500;display:flex;align-items:center;gap:.4rem}
+  .roadmap-step::before{content:"→";color:#4a4ae8}
+  .roadmap-step:first-child::before{content:"";display:none}
+  @media(max-width:600px){.grid-2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📊 Tableau — Complete Notes</h1>
+  <p>Beginner to Advanced | Data Analytics Ready</p>
+</header>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <h2>📋 Table of Contents</h2>
+  <div class="toc-grid">
+    <a href="#s1">1. Introduction</a>
+    <a href="#s2">2. Installation & Setup</a>
+    <a href="#s3">3. Data Connection</a>
+    <a href="#s4">4. Interface</a>
+    <a href="#s5">5. Data Modeling</a>
+    <a href="#s6">6. Data Cleaning</a>
+    <a href="#s7">7. Data Types</a>
+    <a href="#s8">8. Dimensions & Measures</a>
+    <a href="#s9">9. Basic Charts</a>
+    <a href="#s10">10. Advanced Charts</a>
+    <a href="#s11">11. Geographic Viz</a>
+    <a href="#s12">12. Sorting & Filtering</a>
+    <a href="#s13">13. Groups & Hierarchies</a>
+    <a href="#s14">14. Calculated Fields</a>
+    <a href="#s15">15. Table Calculations</a>
+    <a href="#s16">16. Parameters</a>
+    <a href="#s17">17. LOD Expressions</a>
+    <a href="#s18">18. Dashboard Creation</a>
+    <a href="#s19">19. Dashboard Actions</a>
+    <a href="#s20">20. Formatting & UI</a>
+    <a href="#s21">21. Storytelling</a>
+    <a href="#s22">22. Publishing</a>
+    <a href="#s23">23. SQL + Tableau</a>
+    <a href="#s24">24. Advanced Topics</a>
+    <a href="#s25">25. Interview Prep</a>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- 1. INTRODUCTION -->
+<div class="section" id="s1">
+  <h2>🔷 1. Introduction to Tableau <span class="badge">Basics</span></h2>
+  <p>Tableau is a powerful <strong>visual analytics platform</strong> used to create interactive data visualizations and dashboards — without writing code. It was founded in 2003 and acquired by Salesforce in 2019.</p>
+  <h3>Why Tableau?</h3>
+  <ul>
+    <li>Fastest visualization tool — processes large data quickly</li>
+    <li>No programming knowledge required</li>
+    <li>Connects to 50+ data sources (Excel, SQL, Cloud, etc.)</li>
+    <li>Drag-and-drop interface for creating dashboards</li>
+    <li>Supports real-time and live data analysis</li>
+  </ul>
+  <div class="grid-2">
+    <div class="card">
+      <h4>✅ Advantages</h4>
+      <ul>
+        <li>Very fast calculations (backend engine)</li>
+        <li>Interactive & beautiful dashboards</li>
+        <li>No manual calculations needed</li>
+        <li>Handles huge datasets smoothly</li>
+        <li>Strong community & documentation</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>❌ Disadvantages</h4>
+      <ul>
+        <li>High cost for Desktop & Server</li>
+        <li>Parameters are static & single-value only</li>
+        <li>Limited data preprocessing features</li>
+        <li>Not ideal for complex ETL tasks</li>
+        <li>Steep learning curve for LOD & advanced calc</li>
+      </ul>
+    </div>
+  </div>
+  <h3>Tableau Products</h3>
+  <table>
+    <tr><th>Product</th><th>Description</th><th>Cost</th></tr>
+    <tr><td>Tableau Desktop</td><td>Full featured — for building dashboards locally</td><td>Paid</td></tr>
+    <tr><td>Tableau Public</td><td>Free version — publish to public web only</td><td>Free</td></tr>
+    <tr><td>Tableau Server</td><td>Host & share dashboards within organization</td><td>Paid</td></tr>
+    <tr><td>Tableau Cloud</td><td>Cloud-based hosting (SaaS version of Server)</td><td>Paid</td></tr>
+  </table>
+</div>
+
+<!-- 2. INSTALLATION -->
+<div class="section" id="s2">
+  <h2>⚙️ 2. Installation & Setup <span class="badge">Basics</span></h2>
+  <ol class="steps">
+    <li>Go to <strong>tableau.com</strong> → Download Tableau Public (free) or start Desktop trial</li>
+    <li>Create a free <strong>Tableau Public account</strong> to save & publish your work</li>
+    <li>Install the software (Windows or macOS)</li>
+    <li>Launch Tableau → Connect to a data source → Start building</li>
+  </ol>
+  <div class="highlight">💡 <strong>Tip:</strong> For learning, use Tableau Public — it's completely free and you can publish dashboards online for your portfolio.</div>
+  <h3>Desktop vs Public</h3>
+  <table>
+    <tr><th>Feature</th><th>Tableau Desktop</th><th>Tableau Public</th></tr>
+    <tr><td>Price</td><td>Paid (~$70/month)</td><td>Free</td></tr>
+    <tr><td>Save locally</td><td>✅ Yes</td><td>❌ No (cloud only)</td></tr>
+    <tr><td>Private dashboards</td><td>✅ Yes</td><td>❌ No (all public)</td></tr>
+    <tr><td>Data sources</td><td>All 50+ sources</td><td>Limited</td></tr>
+  </table>
+</div>
+
+<!-- 3. DATA CONNECTION -->
+<div class="section" id="s3">
+  <h2>🔗 3. Data Connection <span class="badge must">Must Know</span></h2>
+  <p>Tableau can connect to almost any data source. This is the first step in every project.</p>
+  <div class="grid-2">
+    <div class="card">
+      <h4>File-based Sources</h4>
+      <ul>
+        <li>Excel (.xlsx, .xls)</li>
+        <li>CSV / Text files</li>
+        <li>JSON files</li>
+        <li>PDF files</li>
+        <li>Spatial files (GeoJSON, Shapefile)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Database Sources</h4>
+      <ul>
+        <li>MySQL, PostgreSQL, SQL Server</li>
+        <li>Oracle, Teradata</li>
+        <li>Google BigQuery</li>
+        <li>Amazon Redshift</li>
+        <li>Snowflake</li>
+      </ul>
+    </div>
+  </div>
+  <h3>Live vs Extract Connection</h3>
+  <table>
+    <tr><th></th><th>Live Connection</th><th>Extract (.hyper)</th></tr>
+    <tr><td>Data</td><td>Real-time from source</td><td>Snapshot saved locally</td></tr>
+    <tr><td>Speed</td><td>Slower (depends on DB)</td><td>Faster (optimized)</td></tr>
+    <tr><td>Best for</td><td>Real-time dashboards</td><td>Large datasets, offline work</td></tr>
+    <tr><td>Refresh</td><td>Auto</td><td>Manual or scheduled</td></tr>
+  </table>
+</div>
+
+<!-- 4. INTERFACE -->
+<div class="section" id="s4">
+  <h2>🖥️ 4. Tableau Interface <span class="badge">Basics</span></h2>
+  <p>Understanding the Tableau interface is key before building anything.</p>
+  <div class="grid-2">
+    <div class="card">
+      <h4>Key Areas</h4>
+      <ul>
+        <li><strong>Workbook</strong> — the main file (.twb or .twbx)</li>
+        <li><strong>Worksheet</strong> — single chart/view canvas</li>
+        <li><strong>Dashboard</strong> — combine multiple worksheets</li>
+        <li><strong>Story</strong> — sequence of dashboards for presentation</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Important Panels</h4>
+      <ul>
+        <li><strong>Data Pane</strong> — shows all fields (dimensions + measures)</li>
+        <li><strong>Analytics Pane</strong> — add trend lines, reference lines, forecasts</li>
+        <li><strong>Marks Card</strong> — controls Color, Size, Label, Detail, Tooltip</li>
+        <li><strong>Show Me</strong> — suggests chart types based on selection</li>
+      </ul>
+    </div>
+  </div>
+  <div class="highlight">📌 <strong>Rows & Columns shelf</strong> — Drag fields here to build your visualization. Dimensions go on Columns, Measures on Rows (usually).</div>
+</div>
+
+<!-- 5. DATA MODELING -->
+<div class="section" id="s5">
+  <h2>🔄 5. Data Modeling <span class="badge imp">Important</span></h2>
+  <h3>Joins</h3>
+  <p>Combining two or more tables based on a common field (like SQL joins).</p>
+  <table>
+    <tr><th>Join Type</th><th>Returns</th></tr>
+    <tr><td>Inner Join</td><td>Only matching rows from both tables</td></tr>
+    <tr><td>Left Join</td><td>All rows from left table + matching from right</td></tr>
+    <tr><td>Right Join</td><td>All rows from right table + matching from left</td></tr>
+    <tr><td>Full Outer Join</td><td>All rows from both tables (nulls where no match)</td></tr>
+  </table>
+  <h3>Relationships (New in Tableau 2020.2+)</h3>
+  <p>Relationships are the modern, smarter way to combine tables. Unlike joins, they work at query time and handle multiple levels of granularity without data duplication. <strong>Prefer Relationships over Joins for most use cases.</strong></p>
+  <div class="grid-2">
+    <div class="card">
+      <h4>Union</h4>
+      <p>Stacks rows from multiple tables <em>vertically</em>. Tables must have the same columns. Used when you want to combine data from Jan sheet + Feb sheet, etc.</p>
+    </div>
+    <div class="card">
+      <h4>Data Blending</h4>
+      <p>Joins data from <em>different data sources</em> at the viz level. One is the "primary" and the other is "secondary." Less efficient than joins — use when sources can't be combined at DB level.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 6. DATA CLEANING -->
+<div class="section" id="s6">
+  <h2>🧹 6. Data Cleaning <span class="badge">Basics</span></h2>
+  <p>Done in the <strong>Data Source</strong> tab before building visualizations.</p>
+  <ul>
+    <li><strong>Rename Columns</strong> — double-click column header in Data Source</li>
+    <li><strong>Change Data Types</strong> — click the icon beside the field name (Abc, #, calendar icon)</li>
+    <li><strong>Hide Fields</strong> — right-click → Hide (removes from view, not from data)</li>
+    <li><strong>Split</strong> — splits one column into multiple (e.g., "First Last" → "First" + "Last")</li>
+    <li><strong>Pivot</strong> — converts wide data to long format (columns become rows)</li>
+    <li><strong>Remove Null Values</strong> — use Filters or <code>IFNULL()</code> / <code>ZN()</code> in calculated fields</li>
+    <li><strong>Data Interpreter</strong> — Tableau auto-detects and fixes messy Excel formatting</li>
+  </ul>
+</div>
+
+<!-- 7. DATA TYPES -->
+<div class="section" id="s7">
+  <h2>🔣 7. Tableau Data Types</h2>
+  <table>
+    <tr><th>Data Type</th><th>Icon</th><th>Example</th></tr>
+    <tr><td>String (Text)</td><td>Abc</td><td>Product Name, City</td></tr>
+    <tr><td>Number (Integer/Decimal)</td><td>#</td><td>Sales, Profit, Quantity</td></tr>
+    <tr><td>Boolean</td><td>T/F</td><td>Is Returned? (True/False)</td></tr>
+    <tr><td>Date</td><td>📅</td><td>Order Date, Ship Date</td></tr>
+    <tr><td>Date & Time</td><td>🕐</td><td>Login Time, Transaction Timestamp</td></tr>
+    <tr><td>Geographic</td><td>🌐</td><td>Country, State, Latitude/Longitude</td></tr>
+  </table>
+</div>
+
+<!-- 8. DIMENSIONS & MEASURES -->
+<div class="section" id="s8">
+  <h2>📐 8. Dimensions & Measures <span class="badge imp">Important</span></h2>
+  <div class="grid-2">
+    <div class="card">
+      <h4>Dimensions (Blue)</h4>
+      <p>Categorical / qualitative fields. Used to slice and segment data.</p>
+      <ul>
+        <li>Examples: City, Product Name, Category, Region</li>
+        <li>Usually discrete (independent, separate values)</li>
+        <li>Goes on Rows, Columns, Color, Filter</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Measures (Green)</h4>
+      <p>Numeric / quantitative fields. Used to aggregate and calculate.</p>
+      <ul>
+        <li>Examples: Sales, Profit, Discount, Quantity</li>
+        <li>Usually continuous (form an axis)</li>
+        <li>Tableau auto-aggregates them (SUM, AVG, etc.)</li>
+      </ul>
+    </div>
+  </div>
+  <h3>Continuous vs Discrete</h3>
+  <table>
+    <tr><th></th><th>Discrete (Blue pill)</th><th>Continuous (Green pill)</th></tr>
+    <tr><td>Behavior</td><td>Creates headers/labels</td><td>Creates axis</td></tr>
+    <tr><td>Example</td><td>Month (Jan, Feb, Mar...)</td><td>Sales axis (0 to 1M)</td></tr>
+    <tr><td>Switch</td><td colspan="2">Right-click any field → Convert to Discrete / Continuous</td></tr>
+  </table>
+  <h3>Common Aggregations</h3>
+  <p>Right-click a measure → Measure → choose: <code>SUM</code>, <code>AVG</code>, <code>MIN</code>, <code>MAX</code>, <code>COUNT</code>, <code>COUNTD</code> (distinct count), <code>MEDIAN</code></p>
+</div>
+
+<!-- 9. BASIC CHARTS -->
+<div class="section" id="s9">
+  <h2>📊 9. Basic Charts <span class="badge">Beginner</span></h2>
+  <table>
+    <tr><th>Chart Type</th><th>Best Used For</th><th>Required Fields</th></tr>
+    <tr><td>Bar Chart</td><td>Comparing categories</td><td>1 Dimension + 1 Measure</td></tr>
+    <tr><td>Line Chart</td><td>Trends over time</td><td>1 Date + 1 Measure</td></tr>
+    <tr><td>Pie Chart</td><td>Part-to-whole (max 5–6 slices)</td><td>1 Dimension + 1 Measure</td></tr>
+    <tr><td>Area Chart</td><td>Cumulative trends over time</td><td>1 Date + 1 Measure</td></tr>
+  </table>
+  <div class="highlight">💡 Use <strong>Show Me</strong> panel (top right) — select your fields then click a chart type to auto-build it!</div>
+</div>
+
+<!-- 10. ADVANCED CHARTS -->
+<div class="section" id="s10">
+  <h2>📈 10. Advanced Charts <span class="badge imp">Important</span></h2>
+  <table>
+    <tr><th>Chart</th><th>Use Case</th></tr>
+    <tr><td>Scatter Plot</td><td>Correlation between 2 measures (e.g., Profit vs Sales)</td></tr>
+    <tr><td>Histogram</td><td>Distribution of a single measure using Bins</td></tr>
+    <tr><td>Heat Map</td><td>Color intensity to show magnitude across 2 dimensions</td></tr>
+    <tr><td>Tree Map</td><td>Hierarchical part-to-whole with size+color encoding</td></tr>
+    <tr><td>Bubble Chart</td><td>3 measures shown as X, Y position and bubble size</td></tr>
+    <tr><td>Box Plot</td><td>Distribution, quartiles, and outliers in data</td></tr>
+    <tr><td>Gantt Chart</td><td>Project timelines, task durations</td></tr>
+    <tr><td>Waterfall Chart</td><td>Running total — shows positive/negative contributions</td></tr>
+    <tr><td>Funnel Chart</td><td>Sales/marketing pipeline stages</td></tr>
+    <tr><td>Dual Axis Chart</td><td>Two measures on same chart with different axes</td></tr>
+    <tr><td>Word Cloud</td><td>Text frequency visualization</td></tr>
+  </table>
+  <h3>Dual Axis Chart — Key Steps</h3>
+  <ol class="steps">
+    <li>Drag first measure to Rows</li>
+    <li>Drag second measure to Rows (right side)</li>
+    <li>Right-click second measure → <strong>Dual Axis</strong></li>
+    <li>Right-click axis → <strong>Synchronize Axis</strong> if needed</li>
+  </ol>
+</div>
+
+<!-- 11. GEOGRAPHIC VIZ -->
+<div class="section" id="s11">
+  <h2>🗺️ 11. Geographic Visualization</h2>
+  <p>Tableau has built-in geographic recognition. If a field contains Country, State, City, ZIP Code data — Tableau auto-assigns a Geographic Role.</p>
+  <div class="grid-2">
+    <div class="card">
+      <h4>Filled Map</h4>
+      <p>Shades entire regions (countries/states) based on a measure value. Good for showing regional performance.</p>
+    </div>
+    <div class="card">
+      <h4>Symbol Map</h4>
+      <p>Places circles/shapes on map. Size/color represents measure. Better for city-level or point data.</p>
+    </div>
+  </div>
+  <h3>Setting Geographic Roles</h3>
+  <p>Right-click a dimension → <strong>Geographic Role</strong> → choose Country, State, City, ZIP, Latitude, Longitude</p>
+  <div class="highlight">💡 Double-click Latitude + Longitude fields (or any geo field) → Tableau auto-generates a map view!</div>
+</div>
+
+<!-- 12. SORTING & FILTERING -->
+<div class="section" id="s12">
+  <h2>🔍 12. Sorting & Filtering <span class="badge must">Must Know</span></h2>
+  <h3>Filters (Order of Operations — Top to Bottom)</h3>
+  <ol class="steps">
+    <li><strong>Extract Filter</strong> — applied when creating extract</li>
+    <li><strong>Data Source Filter</strong> — applied to all sheets in workbook</li>
+    <li><strong>Context Filter</strong> — creates a temp table; other filters run within it</li>
+    <li><strong>Dimension Filter</strong> — filters by dimension values</li>
+    <li><strong>Measure Filter</strong> — filters by aggregated measure values</li>
+    <li><strong>Table Calculation Filter</strong> — applied last (after calculation)</li>
+  </ol>
+  <table>
+    <tr><th>Filter Type</th><th>When to Use</th></tr>
+    <tr><td>Quick Filter</td><td>Show filter control on dashboard for user interaction</td></tr>
+    <tr><td>Context Filter</td><td>Make Top N filter work correctly; creates sub-dataset</td></tr>
+    <tr><td>Top N Filter</td><td>Show only Top/Bottom N items (needs Context Filter for accuracy)</td></tr>
+    <tr><td>Conditional Filter</td><td>Filter based on condition (e.g., SUM(Sales) > 10000)</td></tr>
+  </table>
+  <h3>Sorting</h3>
+  <p>Click the sort icon on axis, or go to <strong>Data → Sort Fields</strong>. Options: Alphabetical, By Field (measure), Manual drag-sort, or Data Source order.</p>
+</div>
+
+<!-- 13. GROUPS & HIERARCHIES -->
+<div class="section" id="s13">
+  <h2>🗂️ 13. Groups, Sets & Hierarchies <span class="badge imp">Important</span></h2>
+  <div class="grid-2">
+    <div class="card">
+      <h4>Groups</h4>
+      <p>Manually combine dimension members into a new category.</p>
+      <p><em>Example:</em> Group "East" + "West" → "Coastal Regions"</p>
+      <p><strong>Create:</strong> Select members → right-click → Group</p>
+    </div>
+    <div class="card">
+      <h4>Sets</h4>
+      <p>Dynamic subsets based on a condition or manual selection. Creates In/Out classification.</p>
+      <p><em>Example:</em> Customers with Sales > $5000 = "Top Customers Set"</p>
+    </div>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <h4>Hierarchies</h4>
+      <p>Organize fields in a drill-down structure.</p>
+      <p><em>Example:</em> Country → State → City → ZIP</p>
+      <p><strong>Create:</strong> Drag one field onto another in the Data pane → Name the hierarchy</p>
+    </div>
+    <div class="card">
+      <h4>Drill Down</h4>
+      <p>Click the <strong>+</strong> icon on a hierarchy field in the view to expand to the next level. Click <strong>−</strong> to collapse back up.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 14. CALCULATED FIELDS -->
+<div class="section" id="s14">
+  <h2>🧮 14. Calculated Fields <span class="badge must">Must Know</span></h2>
+  <p>Create new fields using formulas. Right-click in Data pane → <strong>Create Calculated Field</strong></p>
+  <h3>IF / ELSE</h3>
+  <code>IF [Sales] > 10000 THEN "High" ELSEIF [Sales] > 5000 THEN "Medium" ELSE "Low" END</code>
+  <h3>CASE Statement</h3>
+  <code>CASE [Region] WHEN "East" THEN "Eastern" WHEN "West" THEN "Western" ELSE "Other" END</code>
+  <h3>String Functions</h3>
+  <table>
+    <tr><th>Function</th><th>Description</th></tr>
+    <tr><td><code>LEN([Name])</code></td><td>Length of string</td></tr>
+    <tr><td><code>LEFT([Name], 3)</code></td><td>First 3 characters</td></tr>
+    <tr><td><code>UPPER([Name])</code></td><td>Convert to uppercase</td></tr>
+    <tr><td><code>TRIM([Name])</code></td><td>Remove leading/trailing spaces</td></tr>
+    <tr><td><code>CONTAINS([Name], "abc")</code></td><td>Check if string contains value</td></tr>
+    <tr><td><code>REPLACE([Name], "old", "new")</code></td><td>Replace text</td></tr>
+  </table>
+  <h3>Date Functions</h3>
+  <table>
+    <tr><th>Function</th><th>Example</th></tr>
+    <tr><td><code>TODAY()</code></td><td>Current date</td></tr>
+    <tr><td><code>DATEADD('month', 1, [Date])</code></td><td>Add 1 month to date</td></tr>
+    <tr><td><code>DATEDIFF('day', [Start], [End])</code></td><td>Days between two dates</td></tr>
+    <tr><td><code>DATEPART('year', [Date])</code></td><td>Extract year from date</td></tr>
+    <tr><td><code>DATENAME('month', [Date])</code></td><td>Month name as string</td></tr>
+  </table>
+  <h3>Null Handling</h3>
+  <ul>
+    <li><code>IFNULL([Field], 0)</code> — replace null with 0</li>
+    <li><code>ZN([Field])</code> — shortcut for IFNULL([Field], 0)</li>
+    <li><code>ISNULL([Field])</code> — returns True if null</li>
+  </ul>
+</div>
+
+<!-- 15. TABLE CALCULATIONS -->
+<div class="section" id="s15">
+  <h2>📉 15. Table Calculations <span class="badge imp">Important</span></h2>
+  <p>Calculations performed on the result set <em>already returned</em> (not on the raw data). Applied in the view level.</p>
+  <p><strong>Add:</strong> Right-click a measure in view → <strong>Quick Table Calculation</strong></p>
+  <table>
+    <tr><th>Calculation</th><th>What it Does</th></tr>
+    <tr><td>Running Total</td><td>Cumulative sum up to current row</td></tr>
+    <tr><td>Moving Average</td><td>Average over N preceding periods (smooths trends)</td></tr>
+    <tr><td>Percent of Total</td><td>Each value as % of grand total</td></tr>
+    <tr><td>Percent Difference</td><td>% change from one period to next</td></tr>
+    <tr><td>Rank</td><td>Ranks each value (1 = highest by default)</td></tr>
+    <tr><td>Window Functions</td><td>WINDOW_SUM, WINDOW_AVG, WINDOW_MAX, etc.</td></tr>
+  </table>
+  <div class="highlight">💡 <strong>Compute Using</strong> matters! Right-click → Edit Table Calculation → choose: Table (Across), Table (Down), Pane, Cell, or a specific dimension.</div>
+</div>
+
+<!-- 16. PARAMETERS -->
+<div class="section" id="s16">
+  <h2>🎛️ 16. Parameters <span class="badge imp">Important</span></h2>
+  <p>Parameters are dynamic input controls that users can change — they power interactive dashboards.</p>
+  <p><strong>Create:</strong> Right-click in Data pane → <strong>Create Parameter</strong></p>
+  <div class="grid-2">
+    <div class="card">
+      <h4>How Parameters Work</h4>
+      <ol class="steps">
+        <li>Create a Parameter (set type: integer, string, float, list)</li>
+        <li>Show Parameter control (right-click → Show Parameter)</li>
+        <li>Reference it in a Calculated Field using <code>[Parameter Name]</code></li>
+        <li>Use the calculated field in your viz</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h4>Common Use Cases</h4>
+      <ul>
+        <li>Dynamic Top N filter (user selects N = 5, 10, 20...)</li>
+        <li>Switch between measures (show Sales vs Profit)</li>
+        <li>Dynamic date ranges</li>
+        <li>Reference line threshold (set profit goal)</li>
+        <li>What-if analysis (growth rate slider)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 17. LOD -->
+<div class="section" id="s17">
+  <h2>🔬 17. Level of Detail (LOD) Expressions <span class="badge imp">Very Important</span></h2>
+  <p>LOD expressions let you control the <strong>granularity</strong> of a calculation — independently of what's in the view. This is a frequently tested topic in interviews.</p>
+  <table>
+    <tr><th>Type</th><th>Syntax</th><th>When to Use</th></tr>
+    <tr><td><strong>FIXED</strong></td><td><code>{FIXED [Dim] : AGG([Measure])}</code></td><td>Calculate at a specific level regardless of view</td></tr>
+    <tr><td><strong>INCLUDE</strong></td><td><code>{INCLUDE [Dim] : AGG([Measure])}</code></td><td>Add extra dimension to view's granularity</td></tr>
+    <tr><td><strong>EXCLUDE</strong></td><td><code>{EXCLUDE [Dim] : AGG([Measure])}</code></td><td>Remove a dimension from view's calculation</td></tr>
+  </table>
+  <h3>Practical Examples</h3>
+  <ul>
+    <li><code>{FIXED [Customer ID] : SUM([Sales])}</code> → Total sales per customer (even if view is at order level)</li>
+    <li><code>{FIXED [Region] : AVG([Sales])}</code> → Average sales per region (used in comparison)</li>
+    <li><code>{EXCLUDE [Month] : SUM([Sales])}</code> → Annual total even when Month is in view</li>
+  </ul>
+  <div class="highlight">⚠️ <strong>FIXED vs Context Filter:</strong> FIXED LOD ignores dimension filters but respects Context Filters. Always add your filter to Context if you want LOD to respect it.</div>
+</div>
+
+<!-- 18. DASHBOARD CREATION -->
+<div class="section" id="s18">
+  <h2>🖼️ 18. Dashboard Creation <span class="badge must">Must Know</span></h2>
+  <p>A Dashboard combines multiple worksheets + objects into a single interactive view.</p>
+  <h3>Dashboard Objects</h3>
+  <ul>
+    <li><strong>Vertical / Horizontal Containers</strong> — for layout management (tiled vs floating)</li>
+    <li><strong>Text Box</strong> — titles, labels, annotations</li>
+    <li><strong>Image</strong> — logos, backgrounds</li>
+    <li><strong>Blank</strong> — create spacing</li>
+    <li><strong>Web Page</strong> — embed external URLs</li>
+    <li><strong>Extension</strong> — third-party add-ons</li>
+  </ul>
+  <h3>Layout Tips</h3>
+  <ul>
+    <li>Use <strong>Tiled</strong> layout for structured, grid-based designs</li>
+    <li>Use <strong>Floating</strong> for overlapping elements and creative layouts</li>
+    <li>Set dashboard size: Fixed (specific px) or Automatic (responsive)</li>
+    <li>Use <strong>Device Preview</strong> to design for Phone, Tablet, Desktop separately</li>
+  </ul>
+</div>
+
+<!-- 19. DASHBOARD ACTIONS -->
+<div class="section" id="s19">
+  <h2>⚡ 19. Dashboard Actions <span class="badge imp">Important</span></h2>
+  <p>Actions make dashboards interactive. Go to <strong>Dashboard → Actions → Add Action</strong></p>
+  <table>
+    <tr><th>Action Type</th><th>What it Does</th></tr>
+    <tr><td>Filter Action</td><td>Clicking a mark filters another sheet. Most common!</td></tr>
+    <tr><td>Highlight Action</td><td>Clicking a mark highlights related marks in other sheets</td></tr>
+    <tr><td>URL Action</td><td>Clicking opens a URL (link to website, Google Maps, etc.)</td></tr>
+    <tr><td>Parameter Action</td><td>User click changes a parameter value dynamically</td></tr>
+    <tr><td>Set Action</td><td>User click adds/removes items from a Set</td></tr>
+  </table>
+  <div class="highlight">💡 <strong>Filter Action setup:</strong> Source Sheet → Target Sheets → Run Action on: Hover / Select / Menu. "Clearing the selection" options control what happens when nothing is selected.</div>
+</div>
+
+<!-- 20. FORMATTING -->
+<div class="section" id="s20">
+  <h2>🎨 20. Formatting & UI Design</h2>
+  <p>Good formatting = professional dashboards. Access via <strong>Format</strong> menu.</p>
+  <ul>
+    <li><strong>Fonts</strong> — Format → Font → set for whole workbook or specific sheet</li>
+    <li><strong>Colors</strong> — use company brand colors; drag a dimension to Color mark</li>
+    <li><strong>Tooltips</strong> — customize with text, images, and even Viz in Tooltip (embed a mini-chart!)</li>
+    <li><strong>Borders/Shading</strong> — Format → Borders / Shading for table formatting</li>
+    <li><strong>Labels</strong> — click Label mark card → show marks labels, position, overlap control</li>
+    <li><strong>Null values</strong> — Format → Special Values → choose how nulls appear (default, gap, zero)</li>
+  </ul>
+  <div class="highlight">🎨 <strong>Best Practice:</strong> Use max 2–3 colors per dashboard. One highlight color for key metrics. Gray for background/neutral elements.</div>
+</div>
+
+<!-- 21. STORYTELLING -->
+<div class="section" id="s21">
+  <h2>📖 21. Storytelling with Tableau</h2>
+  <p>A <strong>Story</strong> is a sequence of <em>Story Points</em> — each point is a snapshot of a dashboard or sheet with a narrative caption. Used for presentations and business reports.</p>
+  <ol class="steps">
+    <li>Create your dashboards/sheets</li>
+    <li>Go to <strong>New Story</strong> tab</li>
+    <li>Drag dashboards into Story Points</li>
+    <li>Add caption text to each point</li>
+    <li>Publish or present in presentation mode</li>
+  </ol>
+</div>
+
+<!-- 22. PUBLISHING -->
+<div class="section" id="s22">
+  <h2>📤 22. Publishing & Sharing</h2>
+  <table>
+    <tr><th>Format</th><th>Description</th></tr>
+    <tr><td>.twb</td><td>Tableau Workbook — contains only structure, not data</td></tr>
+    <tr><td>.twbx</td><td>Tableau Packaged Workbook — includes data + workbook (share-ready)</td></tr>
+    <tr><td>.hyper</td><td>Tableau Extract file (data snapshot)</td></tr>
+    <tr><td>.tds</td><td>Data Source file (connection info only)</td></tr>
+  </table>
+  <h3>Publishing to Tableau Public</h3>
+  <ol class="steps">
+    <li>File → Save to Tableau Public</li>
+    <li>Sign in with Tableau Public account</li>
+    <li>Add title, description, tags</li>
+    <li>Set visibility (public)</li>
+    <li>Share via link or embed code</li>
+  </ol>
+  <p>You can also export dashboards as <strong>PDF</strong>, <strong>Image (.png)</strong>, or <strong>PowerPoint</strong> via File → Export.</p>
+</div>
+
+<!-- 23. SQL + TABLEAU -->
+<div class="section section-accent-green" id="s23">
+  <h2>🗄️ 23. SQL + Tableau Integration <span class="badge must">Must Know for Jobs</span></h2>
+  <p>Most data analyst roles require SQL knowledge alongside Tableau. You'll connect Tableau to a SQL database and sometimes write custom SQL queries.</p>
+  <h3>Connecting to MySQL / PostgreSQL</h3>
+  <ol class="steps">
+    <li>On Start Page → Under "To a Server" → click MySQL / PostgreSQL</li>
+    <li>Enter Server hostname, Port, Database name, Username, Password</li>
+    <li>Click Sign In → Tableau shows all tables</li>
+    <li>Drag tables to canvas to join them</li>
+  </ol>
+  <h3>Custom SQL in Tableau</h3>
+  <p>Instead of using tables directly, you can write your own SQL: In Data Source tab → <strong>New Custom SQL</strong> → Write your SELECT query.</p>
+  <code>SELECT order_id, customer_name, SUM(sales) as total_sales FROM orders WHERE order_date >= '2023-01-01' GROUP BY order_id, customer_name</code>
+  <div class="highlight">💡 Use Custom SQL when you need pre-aggregated data, complex joins, or filtered data that Tableau's visual interface can't handle efficiently.</div>
+</div>
+
+<!-- 24. ADVANCED TOPICS -->
+<div class="section section-accent-orange" id="s24">
+  <h2>🚀 24. Advanced Tableau Topics <span class="badge imp">Job-Ready Skills</span></h2>
+  <div class="grid-2">
+    <div class="card">
+      <h4>Forecasting</h4>
+      <p>Analytics Pane → Drag <strong>Forecast</strong> to view. Works on time-series data. Uses exponential smoothing. Right-click → Forecast Options to customize.</p>
+    </div>
+    <div class="card">
+      <h4>Trend Lines</h4>
+      <p>Analytics Pane → Drag <strong>Trend Line</strong>. Types: Linear, Logarithmic, Exponential, Power, Polynomial. Right-click → Describe Trend Line to see R² value.</p>
+    </div>
+    <div class="card">
+      <h4>Clustering</h4>
+      <p>Analytics Pane → Drag <strong>Cluster</strong> on scatter plot. Tableau uses K-Means. Right-click cluster → Describe Clusters for details.</p>
+    </div>
+    <div class="card">
+      <h4>Reference Lines & Bands</h4>
+      <p>Analytics Pane → Reference Line (single value line, e.g., avg), Reference Band (shaded region between two values), Reference Distribution (percentiles).</p>
+    </div>
+    <div class="card">
+      <h4>Performance Optimization</h4>
+      <ul>
+        <li>Use Extract instead of Live</li>
+        <li>Reduce marks in view</li>
+        <li>Use Context Filters</li>
+        <li>Avoid nested LOD calculations</li>
+        <li>Use Performance Recording: Help → Settings → Start Performance Recording</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Row-Level Security</h4>
+      <p>Restrict data access per user. Use User Functions: <code>USERNAME()</code>, <code>ISMEMBEROF()</code>. Typically implemented on Tableau Server/Cloud with User Filters.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 25. INTERVIEW PREP -->
+<div class="section section-accent-red" id="s25">
+  <h2>🎯 25. Interview Preparation <span class="badge imp">Very Important</span></h2>
+  <h3>Top Interview Questions</h3>
+  <ul>
+    <li>What is the difference between Joins and Relationships in Tableau?</li>
+    <li>What is the order of operations for filters in Tableau?</li>
+    <li>Explain FIXED, INCLUDE, and EXCLUDE LOD with examples.</li>
+    <li>What is the difference between a Context Filter and a regular filter?</li>
+    <li>How do Parameters work? Give a real-world use case.</li>
+    <li>What is data blending and when would you use it?</li>
+    <li>Difference between .twb and .twbx files?</li>
+    <li>What is a Table Calculation? How is it different from a Calculated Field?</li>
+    <li>How would you create a Top N filter that is dynamically controlled by the user?</li>
+    <li>What is a Dual Axis chart and how do you create it?</li>
+  </ul>
+
+  <h3>Most Important Topics for Jobs</h3>
+  <div class="roadmap">
+    <span class="roadmap-step">Calculated Fields</span>
+    <span class="roadmap-step">LOD Expressions</span>
+    <span class="roadmap-step">Joins & Relationships</span>
+    <span class="roadmap-step">Filters (all types)</span>
+    <span class="roadmap-step">Parameters</span>
+    <span class="roadmap-step">Dashboard Actions</span>
+    <span class="roadmap-step">SQL Integration</span>
+    <span class="roadmap-step">Real Projects</span>
+  </div>
+
+  <h3>Portfolio Recommendations</h3>
+  <ul>
+    <li>Upload 3–5 dashboards on <strong>Tableau Public</strong> profile</li>
+    <li>Include: Sales Dashboard, HR Dashboard, and one domain of your choice</li>
+    <li>Add Tableau Public link on your <strong>resume and LinkedIn</strong></li>
+    <li>Write a GitHub README with screenshots and project description</li>
+    <li>Recommended project datasets: Superstore Sales, Netflix, IPL, COVID-19, World Bank</li>
+  </ul>
+
+  <h3>Best Learning Order</h3>
+  <div class="roadmap">
+    <span class="roadmap-step">Basics + Interface</span>
+    <span class="roadmap-step">Charts (Basic→Adv)</span>
+    <span class="roadmap-step">Calculations + LOD</span>
+    <span class="roadmap-step">Dashboards + Actions</span>
+    <span class="roadmap-step">Real Projects</span>
+    <span class="roadmap-step">SQL Integration</span>
+    <span class="roadmap-step">Advanced Topics</span>
+    <span class="roadmap-step">Portfolio</span>
+  </div>
+  <div class="highlight">📺 <strong>Extra Learning Resources:</strong> After WsCube — watch Tableau Tim, Andy Kriebel, and Data with Baraa for advanced LOD, Table Calculations, and real-world business cases.</div>
+</div>
+
+</div><!-- end container -->
+
+<footer style="text-align:center;padding:1.5rem;color:#888;font-size:.85rem;background:#fff;border-top:1px solid #e0e3ff;">
+  Tableau Complete Notes — Beginner to Advanced &nbsp;|&nbsp; Good luck! 🚀
+</footer>
+
+</body>
+</html>
